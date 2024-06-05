@@ -1,0 +1,22 @@
+{% load django_bootstrap5 %}
+{% load i18n %}
+
+<html lang="ru-ru">
+<head>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Task Manager</title>
+</head>
+
+<body>
+{% include 'includes/nav.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block table %}
+    {% endblock %}
+</body>
+</html>
+

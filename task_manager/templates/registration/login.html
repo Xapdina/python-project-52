@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% load i18n %}
+
+
+{% block content %}
+<main class="container form-signin">
+  <form method="post">
+    {% csrf_token %}
+    <h1 class="h3 mb-3 fw-normal">Sign in</h1>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInput" placeholder="{% trans 'Username' %}">
+      <label for="floatingInput">{% trans 'Username' %}</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="{% trans 'Password' %}">
+      <label for="floatingPassword">{% trans 'Password' %}</label>
+    </div>
+    <br>
+    <button class="btn btn-primary w-100 py-2" onclick="location.href='{% url 'index' %}'" type="submit">Sign in</button>
+  </form>
+</main>
+
+{% endblock %}
