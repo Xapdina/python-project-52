@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block header %}{% translate 'Tasks' %}{% endblock %}
+
+{% block content %}
+<a class="btn btn-primary" href="{% url 'task_create' %}">{% translate 'Create task' %}</a>
+
+{% include './filter.html' %}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>{% translate 'ID' %}</th>
+        <th>{% translate 'Name' %}</th>
+        <th>{% translate 'Status' %}</th>
+        <th>{% translate 'Author' %}</th>
+        <th>{% translate 'Executor' %}</th>
+        <th>{% translate 'Created date' %}</th>
+        <th>{% translate 'Manage' %}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for task in tasks %}
+    <tr>
+        <th scope="row">{{ task.id }}</th>
+        <td>
+            <a href="{% url 'task_detail' task.id %}">{{ task.name }}</a>
+        </td>
+        <td>{{ task.status }}</td>
+        <td>{{ task.creator }}</td>
+        {% if task.executor %}
+            <td>{{ task.executor }}</td>
+        {% else %}
+            <td></td>
+        {% endif %}
+        <td>{{ task.created_at }}</td>
+        <td>
+          <a href="{% url 'task_update' task.id %}">{% translate 'Update' %}</a>
+          <br>
+          <a href="{% url 'task_delete' task.id %}">{% translate 'Delete' %}</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
