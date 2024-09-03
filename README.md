@@ -4,18 +4,18 @@
 
 ### CodeClimate :
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/e49c847310ad4082e4f7/maintainability)](https://codeclimate.com/github/Xapdina/python-project-52/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/3e1fa1abf76ee2ef2540/maintainability)](https://codeclimate.com/github/Xapdina/python-project-52/maintainability)
 
 ### Test coverage:
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/e49c847310ad4082e4f7/test_coverage)](https://codeclimate.com/github/Xapdina/python-project-52/test_coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/3e1fa1abf76ee2ef2540/test_coverage)](https://codeclimate.com/github/Xapdina/python-project-52/test_coverage)
 
 ### Project: Task Manager
 
 Task Manager is a multifunctional and intuitive application designed to optimize the task management process. With its help, users can efficiently organize both professional and personal commitments, enhancing productivity and adherence to deadlines.
 
 
-## [My deployment project](https://python-project-52-m4sg.onrender.com)
+## [My deployment project](https://task-manager-95rm.onrender.com)
 
 #### Requirements and Tools:
 
